@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>监听器watch</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    {{ message }}
+    <br />
+    <input v-model="message">
+    <br />
+    <input v-model="a">
+    <br />
+    <input v-model="obj.age">
+    <br />
+    <input v-model="obj.name">
+    <br />
+    <input v-model="bh">
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+      a:1,
+      obj:{
+        name:'gr',
+        age:18
+      },
+      bh:''
+    },
+    methods: {
+      // details: function () {
+      //   return this.site + " - 学的不仅是技术，更是梦想！";
+      // }
+    },
+    watch: {
+      //普通的watch监听
+      a(val, oldVal){
+        console.log("a: "+val);
+        this.bh=+val+(+this.obj.age)
+     },
+     //深度监听，可监听到对象、数组的变化
+     obj:{
+         handler(val){
+             console.log("变化前后的值： "+val.age, '---');
+         },
+         deep:true, //true 深度监听
+         immediate: true //声明后立刻调用
+     }
+    // 无法监听
+    // obj(val, oldVal){
+    //   console.log(val,oldVal);
+    // }
+    },
+  })
+</script>
+
+</html>
