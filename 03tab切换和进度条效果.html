@@ -60,9 +60,10 @@
       position: relative;
       display: flex;
       justify-content: space-around;
-     
+
     }
-    .progress ul::after{
+
+    .progress ul::after {
       content: " ";
       position: absolute;
       top: 100%;
@@ -89,24 +90,27 @@
       background-color: blue;
       border: 1px solid blue;
       border-radius: 6px;
-      transform: translate(-50%,60%);
+      transform: translate(-50%, 60%);
     }
-     .triangle ul>li::after{
+
+    .triangle ul>li::after {
       width: 0;
-    height: 0;
-    border:7px solid;
-    border-radius: 0;
-    background-color: #fff;
-    border-color: transparent transparent blue;
-    transform: translate(-45%,-11%);
+      height: 0;
+      border: 7px solid;
+      border-radius: 0;
+      background-color: #fff;
+      border-color: transparent transparent blue;
+      transform: translate(-45%, -11%);
     }
-    .triangle ul>li:nth-child(even){
-     transform: translateY(180%);
-     
+
+    .triangle ul>li:nth-child(even) {
+      transform: translateY(180%);
+
     }
-    .triangle ul>li:nth-child(even)::after{
-         top: -10px;
-         transform: rotate(180deg) translateX(45%);
+
+    .triangle ul>li:nth-child(even)::after {
+      top: -10px;
+      transform: rotate(180deg) translateX(45%);
     }
   </style>
 
@@ -130,13 +134,15 @@
           <li>文字标签</li>
         </ul>
       </div>
-      <div class="progress triangle  none"><ul>
+      <div class="progress triangle  none">
+        <ul>
           <li>文字标签</li>
           <li>文字标签</li>
           <li>文字标签</li>
           <li>文字标签</li>
           <li>文字标签</li>
-        </ul></div>
+        </ul>
+      </div>
     </div>
   </div>
 
