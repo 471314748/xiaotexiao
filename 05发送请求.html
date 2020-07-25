@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>请求</title>
+  <!-- 引入VUE -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/qs/6.7.0/qs.min.js"></script>
+  <style>
+    #app {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+    }
+
+    .auto {
+      text-align: center;
+    }
+
+    .autoDiv {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <h2 class="auto">用户登录</h2>
+    <el-form label-width="100px" :model='form' :rules="rules" ref='form'>
+      <el-form-item label="用户名" prop='username'>
+        <el-input v-model='form.username'></el-input>
+      </el-form-item>
+      <el-form-item label="密码" prop='password'>
+        <el-input v-model='form.password'></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button @click="dialogFormVisible">取消</el-button>
+        <el-button type="primary" @click="loginClick(JSON.stringify(form))">登录</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+</body>
+<script>
+  // 添加请求拦截器
+  // axios.interceptors.request.use(function (config) {
+  //   // 在发送请求之前做些什么
+  //   // 请求拦截器中，如果有token，请求中添加token
+  //     config.headers[Content-Type] = 'application/x-www-form-urlencoded',
+  //     config.headers[Authorization] = 'Basic SnVyYXNzaWNfY2xpZW50Okp1cmFzc2ljX3NlY3JldA=='
+  //   return config
+  // }, function (error) {
+  //   // 对请求错误做些什么
+  //   return Promise.reject(error)
+  // })
+  var qs = Qs;
+  var app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        form: {
+          username: 'gzhr',
+          password: '123456'
+        },
+        rules: {
+          username: [{ required: true, message: '请输入用户名', trigger: 'chang' }],
+          password: [{ required: true, message: '请输入密码', trigger: 'chang' }]
+        }
+      }
+    },
+    methods: {
+      instance() {
+        return
+      },
+      // toLogin() {
+      //   return instance({
+      //     method: 'post',
+      //     url: ' /authorization-server/oauth/token',
+      //     params: {
+      //       scope: 'read',
+      //       grant_type: 'password'
+      //     },
+      //     data: {
+      //       username: 'gzhr',
+      //       password: '123456'
+      //     }
+      //   })
+      // },
+      dialogFormVisible() {
+        this.$message.success('重置表单成功');
+        this.$refs.form.resetFields()
+      },
+      loginClick(data) {
+        this.$refs.form.validate(result => {
+          if (result) {
+            var instance = axios.create({
+              baseURL: 'http://digitge.com',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic SnVyYXNzaWNfY2xpZW50Okp1cmFzc2ljX3NlY3JldA=='
+              }
+            });
+            var data = qs.stringify(this.form);
+            instance({
+              method: 'post',
+              url: '/authorization-server/oauth/token',
+              params: {
+                scope: 'read',
+                grant_type: 'password'
+              },
+              data: data
+            }).then(res => {
+              console.log(res);
+              this.$message.success('登录成功');
+            }).catch(req => {
+              console.log(req);
+            })
+          }
+        })
+      }
+    },
+  })
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>把i-miss-you变成I Miss You</h2>
+    <input type="text" v-model='val'>
+    <!-- 把i-miss-you变成I Miss You  -->
+    <button @click='dianji'>按钮</button>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      val: 'i-miss-you'
+    },
+    methods: {
+      dianji(){
+        var val1 = this.val.split('-')
+        console.log(val1);
+        this.val=""
+        for (var key in val1) {
+          // 遍历数组，每一项的第一个字符大写，拼接从第一项之后的字符
+          this.val+=val1[key][0].toUpperCase()+val1[key].substring(1, val1[key].length)+" "
+        }
+      }
+    },
+  })
+</script>
+</html>

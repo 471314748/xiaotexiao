@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD5</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="./md5.js"></script>
+  <style>
+    #app {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+    }
+
+    .auto {
+      text-align: center;
+    }
+
+    .autoDiv {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-form label-width="100px" :model='form'>
+      <el-form-item label="用户名" prop='username'>
+        <el-input v-model='form.username'></el-input>
+      </el-form-item>
+      <el-form-item label="密码" prop='password'>
+        <el-input v-model='form.password'></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button>取消</el-button>
+        <el-button type="primary" @click="loginClick">登录</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
+
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        form: {
+          username: '',
+          password: ''
+        },
+        password1: '',
+        password2: ''
+      }
+    },
+    methods: {
+      loginClick() {
+        // console.log(this.form);
+        this.password1 = md5(this.form.password);
+        this.password2 = md5(this.form.password+'123');
+        console.log('原密码',this.form.password);
+        console.log('MD5加密后',this.password1);
+        console.log('MD5加盟加盐后',this.password2);
+      }
+    },
+  })
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom操作</title>
+  <style>
+    /* 弹性 */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .box {
+      display: flex;
+      height: 500px;
+    }
+
+    .left {
+      width: 220px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    .main {
+      flex: 1;
+      height: 500px;
+      background-color: blue;
+    }
+
+    .right {
+      width: 220px;
+      height: 500px;
+      background-color: yellow;
+    }
+  </style>
+  <!-- <style>
+    /* 浮动 */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .box{
+      height: 500px;
+    }
+    .left {
+      width: 220px;
+      height: 500px;
+      background-color: pink;
+      float: left;
+    }
+    .main {
+      margin: 0 220px;
+      height: 500px;
+      background-color: blue;
+    }
+    .right {
+      width: 220px;
+      height: 500px;
+      background-color: yellow;
+      float: right;
+    }
+  </style> -->
+  <!-- <style>
+    /* 定位 */
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .box{
+      position: relative;
+    }
+    .left {
+      width: 220px;
+      height: 500px;
+      background-color: pink;
+      position: absolute;
+      left: 0;
+      top: 0
+    }
+    .main {
+      margin: 0 220px;
+      height: 500px;
+      background-color: blue;
+    }
+    .right {
+      width: 220px;
+      height: 500px;
+      background-color: yellow;
+      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="box">
+    <div class="left"> </div>
+    <div class="main"> </div>
+    <div class="right"> </div>
+  </div>
+</body>
+
+</html>
