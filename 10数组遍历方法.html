@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组遍历方法</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h2>{{name}}</h2>
+    <h2>{{arr}}</h2>
+    <h2>{{arr2}}</h2>
+    <button @click='dian'>点击</button>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      name: '小明',
+      arr: [1, 2, 3, 3, 2, 1, 5],
+      arr2: []
+    },
+    methods: {
+      dian() {
+        // forEach方法单纯遍历
+        // this.arr.forEach(item => {
+        //   console.log(item+1);
+        // });
+        
+        // map方法遍历数组元素，可以操作元素，返回新数组
+        // this.arr2=this.arr.map(item=>{
+        //   console.log(item);
+        //   return item+1
+        // })
+
+        // filter方法，遍历筛选每一个数组，返回筛选元素后的数组
+        this.arr2=this.arr.filter(item=>{
+          console.log(item);
+          return item>2
+        })
+      }
+    }
+  })
+</script>
+
+</html>

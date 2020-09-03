@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正则表达式</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    电话：<input type="text" v-model="phone">
+    <button @click='sub'>点击</button>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      phone: 13446543208,
+      zzPhone: /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/
+    },
+    methods: {
+      sub() {
+        if (!this.zzPhone.test(this.phone)) {
+          alert('正则表达式不通过')
+          return
+        }
+        alert('继续下面代码')
+      }
+    }
+  })
+</script>
+
+</html>

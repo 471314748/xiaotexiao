@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Html from '../views/html.vue'
 import Zi from '../views/emit/zi.vue';
 import Fu from '../views/emit/fu.vue';
+import Mock from '../views/mock/mock.vue';
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ Vue.use(VueRouter)
   {
     path: '/zi',
     component: Zi
+  },
+  {
+    path: '/mock',
+    component: Mock
   },
 ]
 

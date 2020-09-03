@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>获取value</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <input type="text" placeholder="昵称" id="name"> </br>
+    <input type="text" placeholder="密码" id="password"> </br>
+    <input type="text" placeholder="昵称"> </br>
+    <input type="text" placeholder="昵称"> </br>
+    <input type="text" placeholder="昵称"> </br>
+    <input type="text" placeholder="昵称"> </br>
+    <select>
+      <option value="0">86</option>
+      <option value="1">99</option>
+      <option value="2">110</option>
+    </select>
+    <input type="text" placeholder="手机号码" id="phone"> </br>
+    <span>可以通过手机号码找回密码</span> </br>
+    <input type="submit" name="search" id="search">
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    var name = document.getElementById('name');
+    var password = document.getElementById('password');
+    var phone = document.getElementById('phone');
+    var search = document.getElementById('search');
+    search.onclick = function search() {
+      console.log(name);
+      console.log(name.value);
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  var ws = new WebSocket("wss://echo.websocket.org");
+
+  ws.onopen = function () {
+      console.log("连接成功");
+      ws.send("Hello WebSockets!");
+    };
+
+    ws.onmessage = function (evt) {
+      console.log("服务器返回信息: " + evt.data);
+      ws.close();
+    };
+
+    ws.onclose = function () {
+      console.log("连接关闭");
+  };  
+</script>
+
+</html>
