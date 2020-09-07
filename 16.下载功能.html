@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="http://small_whirlwind_01234.gitee.io/moyumusic/img/disc.png" download>下载</a>
+  <button id="xiazai">下载</button>
+  <a href="http://small_whirlwind_01234.gitee.io/moyumusic/img/disc.png" 
+		 		download="test.png">点击下载</a>
+</body>
+<script>
+  let xiazai = document.getElementById('xiazai')
+  xiazai.onclick = () => {
+    window.open('http://small_whirlwind_01234.gitee.io/moyumusic/img/disc.png')
+  }
+</script>
+
+</html>

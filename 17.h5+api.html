@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<button type="button" id="btn">点击</button>
+    <button onclick="captureImage()">拍照</button>
+    
+    
+		<script type="text/javascript">
+			// 普通弹出层
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+				function getModel() {
+					console.log("Model: " + plus.device.model);
+					alert("Model: " + plus.device.model)
+				}
+				// getModel()
+				document.querySelector('#btn').onclick = function() {
+					getModel()
+				}
+			});
+		</script>
+		<script type="text/javascript">
+			// 摄像头
+			// 扩展API加载完毕后调用onPlusReady回调函数 
+			document.addEventListener("plusready", onPlusReady, false);
+			// 扩展API加载完毕，现在可以正常调用扩展API 
+			function onPlusReady() {
+				console.log("plusready");
+			}
+			// 拍照
+			function captureImage() {
+				var cmr = plus.camera.getCamera();
+				var res = cmr.supportedImageResolutions[0];
+				var fmt = cmr.supportedImageFormats[0];
+				console.log("Resolution: " + res + ", Format: " + fmt);
+				cmr.captureImage(function(path) {
+						alert("Capture image success 成功: " + path);
+					},
+					function(error) {
+						alert("Capture image failed 失败: " + error.message);
+					}, {
+						resolution: res,
+						format: fmt
+					}
+				);
+			}
+		</script>
+	</body>
+</html>
