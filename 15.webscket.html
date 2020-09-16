@@ -11,7 +11,7 @@
 
 </body>
 <script>
-  var ws = new WebSocket("http://openapi.tuling123.com/openapi/api/v2");
+  var ws = new WebSocket("wss://echo.websocket.org");
 
   ws.onopen = function () {
       console.log("连接成功");
