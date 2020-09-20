@@ -19,6 +19,8 @@
     <input v-model="obj.age">
     <br />
     <input v-model="sum">
+    <br />
+    <input v-model="c">
   </div>
 </body>
 <script>
@@ -27,6 +29,7 @@
     data: {
       message: 'Hello Vue!',
       a:1,
+      b:2,
       obj:{
         name:'gr',
         age:18
@@ -36,6 +39,14 @@
     computed: {
       sum:function(){
         return +this.a+(+this.obj.age)
+      },
+      c:{
+        get(){
+          return +this.a+this.b
+        },
+        set() {
+          console.log(111);
+        }
       }
     },
   })
