@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  let cart = [
+    {
+      id: 4399,
+      name: '黄忠'
+    }, {
+      id: 4379,
+      name: '吕布'
+    }
+  ];
+  let goodsList = [
+    {
+      id: 4399,
+      wq: '弓箭',
+      zq: '黄骠马'
+    }, {
+      id: 4379,
+      wq: '方天画戟',
+      zq: '赤兔马'
+    }
+  ];
+  // 数组里对象有id相同，合并两数组对象
+  let chObj = cart.map(item => {
+    // find方法，如果符合条件，返回符合条件那一项
+    let ch = goodsList.find(goodItem => {
+      // 注意根据数据类型选择是否全等于
+      return item.id === goodItem.id
+    })
+    return { ...item, ...ch }
+  })
+  console.log('合并后数组');
+  console.log(chObj);
+</script>
+
+</html>

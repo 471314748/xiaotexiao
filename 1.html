@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  var obj1 = [
+    {
+      id: 4399,
+      name: '黄忠'
+    }, {
+      id: 4379,
+      name: '吕布'
+    }
+  ]
+  var obj2 = [
+    {
+      id: 4399,
+      wq: '弓箭',
+      zq: '黄骠马'
+    }, {
+      id: 4379,
+      wq: '方天画戟',
+      zq: '赤兔马'
+    }
+  ]
+  function hb(arr1, arr2) {
+     return arr1.map(item => {
+       let arr= arr2.find(item1=>{
+         return item.id==item1.id
+       })
+       return{...item,...arr}
+    }) 
+    
+  }
+  console.log(obj1,obj2);
+  var arr1 = hb(obj1, obj2)
+  console.log(arr1);
+
+</script>
+
+</html>
