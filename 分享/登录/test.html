@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" />
+</head>
+<body>
+<button id="customBtn" type="button">Google 登录</button>
+
+<button type="button" onclick="signOut();">Sign out</button>
+
+<script src="https://apis.google.com/js/api:client.js"></script>
+<script>
+var googleUser = {};
+// 函数
+var auth2;
+var startApp = function() {
+	gapi.load('auth2', function() {
+		// 未知方法
+		auth2 = gapi.auth2.init({
+		client_id: '311085128521-3mb4f7lu6q1a4hhm12kt7q1nputld23f.apps.googleusercontent.com', //客户端ID
+		cookiepolicy: 'single_host_origin',
+		scope: 'profile' //可以请求除了默认的'profile' and 'email'之外的数据
+	});
+	// 触发attachSignin函数
+	attachSignin(document.getElementById('customBtn'));
+});
+};
+// 最后
+function attachSignin(element) {
+	auth2.attachClickHandler(element, {},
+	function(googleUser) {
+		var profile = auth2.currentUser.get().getBasicProfile();
+		console.log(googleUser.wc.id_token)
+        /*for(let attr in googleUser){
+            console.log(attr+"=="+googleUser[attr]);
+        }*/
+        console.log(googleUser);
+		console.log('ID: ' + profile.getId());
+		console.log('Full Name: ' + profile.getName());
+		console.log('Given Name: ' + profile.getGivenName());
+		console.log('Family Name: ' + profile.getFamilyName());
+		console.log('Image URL: ' + profile.getImageUrl());
+		console.log('Email: ' + profile.getEmail());
+	},
+	function(error) {
+		console.log(JSON.stringify(error, undefined, 2));
+	});
+}
+startApp();
+
+//注销
+// function signOut() {
+// 	var auth2 = gapi.auth2.getAuthInstance();
+// 		auth2.signOut().then(function() {
+// 		alert('用户注销成功');
+// 	});
+// }
+</script>
+</body>
+</html>

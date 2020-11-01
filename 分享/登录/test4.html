@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" />
+    <script src="//adodson.com/hello.js/dist/hello.all.js"></script>
+    <!--<script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>-->
+</head>
+<body>
+<button class="twBtn" onclick = "login_twitter('twitter')" ></button>
+</body>
+<script>
+    var log = console.log;
+    hello.init({'twitter' : 'rSaHwHCyY3NmKUWuxF24OU2E7'});
+    function login_twitter(network){  //登录方法，并将twitter 作为参数传入
+        // Twitter instance
+        var twitter = hello(network);
+        // Login
+        twitter.login().then( function(r){
+            // Get Profile
+            console.log(r,111);
+            return twitter.api('/me');
+        }, log ) .then( function(p){
+
+            console.dir(p);
+            //已获取用户信息，在此处理
+
+            var response = {'id':p.id,'first_name':p.name,'last_name':p.last_name,'picture':p.thumbnail,'link':'https://twitter.com/'+p.screen_name,'login_type':'twitter'};
+            console.dir(response);
+        }, log );
+    }
+</script>
+</html>
