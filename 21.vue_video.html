@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h4>{{message}}</h4>
+    <div class="videoBox">
+      <video controls src="https://vd3.bdstatic.com/mda-kbrx09w9rm538x6z/sc/mda-kbrx09w9rm538x6z.mp4?pd=22"></video>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: '秒数5厘米'
+      },
+      methods: {
+        
+      }
+    })
+  </script>
+</body>
+</html>
