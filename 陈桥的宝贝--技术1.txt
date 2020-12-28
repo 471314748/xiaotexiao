@@ -1,0 +1,1386 @@
+一.去掉overflow滚动条方法
+1
+::-webkit-scrollbar {
+    width: 0px;
+    height: 1px;
+}
+
+2
+ overflow: hidden;
+
+查看本电脑公钥
+type %userprofile%\.ssh\id_rsa.pub
+
+生成新的公钥
+ssh-keygen -t rsa -C "个人gitLab注册邮箱"
+
+cnpm install node-sass@latest
+
+
+修改数组内特定的数据
+let index = 1;
+this.setData({
+  [`people[${index}].age`]: 25
+})
+
+使用 for in 循环遍历对象的属性时，原型链上的所有属性都将被访问： 
+自身属性可跳过
+if(!array.hasOwnProperty(i)){
+continue
+}
+
+小程序自带
+input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #aab2bd;
+  
+}
+
+
+//小程序内图片可识别
+show-menu-by-longpress="true"
+
+
+三角形
+  width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+
+圆弧
+.mine_head{
+position: relative;
+width: 100%;
+height: 500rpx;
+z-index: 1;
+overflow: hidden;
+}
+.mine_head::after{
+  content: '';
+  width: 140%;
+  height: 500rpx;
+  position: absolute;
+  left: -20%;
+  top:0;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  background-color: #777;
+}
+
+小程序转uni-app
+使用miniprogram to uniapp转换微信小程序”项目为uni-app项目
+npm install miniprogram-to-uniapp -g  // 管理员权限安装
+wtu -V  //查看版本
+wtu -i "你的小程序项目路径"
+转换后的xxx_uni项目
+csdn链接https://www.cnblogs.com/ningjiabing/p/13397135.html
+gitthup链接 https://github.com/zhangdaren/miniprogram-to-uniapp
+
+video.js的使用
+css：可以直接添加样式。有三种 .vjs-fluid,.vjs-4-3,.vjs-16-9 第一种它会自动计算，后面两种指定比率。 样式也需要设置起始宽高才能显示图片
+图片圆弧
+border-radius: 100% 100% 100% 100% / 0% 0% 30% 30%;
+
+图片模糊
+filter: blur(5px)
+
+//阴影
+box-shadow: 0rpx 0rpx 10rpx #f4f4f4;
+
+移动端滚动页面fixed定位闪动 body+overflow-y: hidden;
+域名备案，域名解析ip，登录服务器，创建站点，指向域名，上传项目，配置数据库
+//表格样式与html
+ <table border="1" cellpadding="10" cellspacing="1">
+            <thead class="list_title">
+
+                <th>商品图片</th>
+                <th>商品标题</th>
+                <th>状态</th>
+                <th>操作</th>
+            </thead>
+            <tbody id="container">
+                <tr>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+ table {
+        width: 100%;
+        border-spacing: 0;  //控制表格竖线
+        border-collapse: collapse;
+    }
+
+colspan="2" 成一行
+rowspan="2" 成一列
+//jq拼接字符串
+    var group = data.list;
+                //拼接字符串
+                var str = '';
+                //对数据做遍历，拼接到页面显示
+                for (var i = 0; i < group.length; i++) {
+                    str +='<div class="container">' +
+                     '   <div>' +
+                        '<img src="'+group[i].image+'" alt="">' +
+                        ' </div>' +
+                        ' <div>' +
+                        '  <p>' + group[i].title + '</p>' +
+                        '  <p>' + group[i].num_iid + '</p>' +
+                        ' </div>' +
+                        ' <div>'+
+                            '<p></p>' +
+                            ' </div>' +
+                            '  <div>' +
+                            '   <p>一键生成</p>' +
+                            '  </div>'+
+                            '  </div>';
+                }
+                //放入页面的容器显示
+                $('#container').html(str);
+
+//微信小程序动态控制class
+ <view catchtap="switcg_change" class="{{is_right==true ? 'switch_right' : 'switch_left'}}"></view>
+
+//vue动态控制class
+ <div :class="{black_op:is_color}"> 兑换</div>
+
+//vue监听数据 watch
+   // 深度监听所有数据，每次改变重新计算总价和总数
+    cartInfoList: {   //cartInfoList为变换的数据
+      deep: true,  //深度监听
+immediate: true， //首次监听
+      handler (val, oldval) {  //固定写法
+        this._totalPeice()
+        this._totalCount()
+      }
+    }
+
+//微信小程序image加mode='aspectFill'
+图片不会拉扯
+
+//判断对象为空
+JSON.stringify(c)=='{}'
+Object.keys(obj).length==0
+
+
+{include file=head.html}官网导入头部
+
+
+//正则表达式的使用
+var guizhe=/^([0-9a-zA-Z])+\@([a-zA-Z0-9])+\.([a-zA-Z])+$/       //定义正则
+使用test() 返回false true  . replace() 直接替换 . match()成功返回内容 失败null  .  search()成功返回下标 失败返回-1
+guizhe.test(字符串)
+
+数字：^[0-9]*$
+n位的数字：^\d{n}$
+至少n位的数字：^\d{n,}$
+m-n位的数字：^\d{m,n}$
+零和非零开头的数字：^(0|[1-9][0-9]*)$
+非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
+带1-2位小数的正数或负数：^(\-)?\d+(\.\d{1,2})?$
+正数、负数、和小数：^(\-|\+)?\d+(\.\d+)?$
+有两位小数的正实数：^[0-9]+(.[0-9]{2})?$
+有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$
+非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$
+非零的负整数：^\-[1-9][]0-9"*$ 或 ^-[1-9]\d*$
+正实数  /^-?\d+\.?\d*$/
+
+一般的名字 /^[\u4e00-\u9fa5\S]{1,10}$/
+微信号 /^[a-zA-Z]{1}[-_a-zA-Z0-9]{5,19}$/
+
+mode="widthFix  宽度不变 高度自动化 保持宽高比
+mode="aspectFill 保持横比缩放图片 只保证短边全部显示
+mode="aspectFit  保持横比缩放图片  长边可以完全显示
+mode="scaleToEill 使图片狂傲完全填满
+
+//vue监听inputht获取数据
+v-on:input;
+内容在e.target.value中
+
+//单行溢出隐藏
+overflow: hidden;
+   text-overflow:ellipsis;
+    white-space: nowrap; 
+
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+//进度条
+<progress :value='70' :max='100' class="mypro"></progress>
+
+
+//跳转
+location.href = "/shop/front/operation_center/login"
+
+
+获取url后
+function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+overflow-x会产生小间距给父类加font-size:0或者让子类排列无缝隙
+
+display:flex;
+//后代不缩放可以横向滚动
+flex-shrink: 0;
+
+
+传给后台
+ var data = {};
+        data = JSON.stringify(data);
+ dataType: "json",
+ data: {'data': data},
+
+自己获取
+JSON.parse();
+
+
+桥头便民小程序总结
+1 熟记接口名称
+
+  // 点击可预览 保存 收藏 发送朋友
+  longtap: function(e) {
+    var current = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接   
+      urls: [current] // 需要预览的图片http链接列表   
+    })
+  },
+
+ // 长按识别二维码
+  saveImage(e) {
+    let url = e.currentTarget.dataset.src;
+    //用户需要授权
+//授权问题 有默认授权时 可以在当前事件的fail中添加状态再判断使用授权方法
+
+//效果见智能名片  我的录音页面
+    wx.getSetting({
+      success: (res) => {
+        if (!res.authSetting['scope.writePhotosAlbum']) {
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success: () => {
+              // 同意授权
+              this.saveImg1(url);//调用保存图片
+            },
+            fail: (res) => {
+              var l = this.data.openSettingBtnHidden;
+              console.log("???", l)
+              console.log(res, "用户拒绝授权");
+              wx.showModal({
+                title: '提示',
+                content: '您拒绝了授权,保存图片需要去系统设置打开',
+                success: () => {
+//打开系统设置
+                  wx.openSetting({
+                    success: () => {
+                    }
+                  })
+                }
+              })
+            }
+          })
+        } else {
+          // 已经授权了
+          this.saveImg1(url);
+        }
+      },
+      fail: (res) => {
+        console.log(res);
+      }
+    })
+  },
+
+
+npm install webpack --save-dev
+vue init webpack  ”项目名称“
+y n n n
+
+
+//解决vue新项目不带node_moudles;
+npm cache clean --force然后npm install 下载模块，再运行
+
+//使用vw
+npm install postcss-px-to-viewport --save-dev
+在package.json中引用
+"postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-px-to-viewport": {
+        "unitToConvert": "px",
+        "viewportWidth": 375,
+        "unitPrecision": 3,
+        "viewportUnit": "vw",
+        "minPixelValue": 1
+      }
+    }
+  },
+
+
+//less报错 版本过高
+npm install less less-loader --save
+npm uninstall less-loader
+npm install less-loader@4.1.0 --save
+
+//保存到相册
+  saveImg1(url) {
+    wx.getImageInfo({
+      src: url,
+      success: (res) => {
+        let path = res.path;
+        wx.saveImageToPhotosAlbum({
+          filePath: path,
+          success: (res) => {
+            wx.showModal({
+              title: '存图成功',
+              content: '图片成功保存到相册了，扫码加关注',
+              showCancel: false,
+              confirmText: '好哒',
+              confirmColor: '#72B9C3',
+              success: function(res) {
+                if (res.confirm) {
+                  // console.log('用户点击确定');
+                }
+                // that.hideShareImg()
+              }
+            })
+          },
+          fail: (res) => {
+            console.log(res);
+          }
+        })
+      },
+      fail: (res) => {
+        console.log(res);
+      }
+    })
+  },
+
+
+  // 导航
+  navction: function(e) {
+    var nactionx = parseFloat(e.currentTarget.dataset.locationx);
+    var nactiony = parseFloat(e.currentTarget.dataset.locationy);
+    var address = e.currentTarget.dataset.address
+    wx.openLocation({
+      latitude: nactionx,
+      longitude: nactiony,
+      scale: 18,
+      address: address
+    })
+  },
+
+//跳转
+ wx.navigateTo({
+      url: "../settled/settled"
+    });
+
+ wx.redirectTo({
+      url: t.currentTarget.dataset.url,
+    })
+
+ wx.reLaunch({
+      url: "../shun/shun",
+      success: function(t) {},
+      fail: function(t) {},
+      complete: function(t) {}
+    });
+
+对角渐变
+  background: -webkit-linear-gradient(-45deg, #FF7B06 0%, #FF600A 100%);
+ background-image: linear-gradient(to bottom right, red, yellow);
+
+input::-webkit-input-placeholder {
+  color: #A7A7A7;
+}
+input::-moz-input-placeholder {
+  color:#A7A7A7;
+}
+input::-ms-input-placeholder {
+  color: #A7A7A7;
+}
+
+
+//设置头部标题
+  wx.setNavigationBarTitle({
+            title: t.data.type_name
+          });
+
+//转义字符
+  replaceSpecialChar: function(url) {
+    url = url.replace(/&quot;/g, '"');
+    url = url.replace(/&amp;/g, '&');
+    url = url.replace(/&lt;/g, '<');
+    url = url.replace(/&gt;/g, '>');
+    url = url.replace(/&nbsp;/g, ' ');
+    console.log("转义字符", url);
+    return url;
+  },
+
+//富文本解析
+//res.data.Release_content  就是解析内容
+var WxParse = require('../../../../wxParse/wxParse.js')
+ WxParse.wxParse('article', 'html', res.data.Release_content, t, 5)
+<import src="../../../../wxParse/wxParse.wxml" />
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+
+//自带解析方式
+//nodes就是解析内容
+  <rich-text nodes="{{nodes}}"></rich-text>
+
+
+
+//获取系统信息
+wx.getSystemInfo({
+        success: function(t) {
+         console.log(t);
+        }
+      }),
+
+//点击获取data-xxx的参数
+ t.currentTarget.dataset.xxx,
+
+//存储本地 名和值 可以是对象
+ wx.setStorageSync("code", e)
+//得道本地
+wx.getStorageSync("users").id
+
+
+//提示框
+wx.showModal({
+                    title: "配置提示",
+                    content: "请在后台配置高德地图的key",
+                    showCancel: !0,
+                    cancelText: "取消",
+                    confirmText: "确定",
+                    success: function(t) {},
+                    fail: function(t) {},
+                    complete: function(t) {}
+                  }),
+  wx.showToast({
+        title: '生成中...',
+        mask: true,
+        icon: 'loading'
+      });
+
+vue解决跨域
+.解决跨域：
+config/index.js
+proxyTable: { 
+'/api': { 
+target: ' http://121.54.168.129:80',//后端接口地址
+ 		changeOrigin: true,//是否允许跨越 
+pathRewrite: { '^/api': '/api'} 
+} 
+},
+修改完配置文件，重启服务器！！！！
+修改post请求的地址： /api/admin/login
+
+//正则替换for in循环
+t.data[e].tz.title = t.data[e].tz.title.replace(/?/g, '\n'),
+
+//picker标签
+<!-- 普通选择器  mode=selector -->这是默认
+<!-- 时间选择器  mode=time -->
+<!-- 日期选择器  mode=date -->
+<picker bindchange="edit" range="{{store_type}}" data-index="{{index}}" value="{{index}}">
+    <view class="input" style="width:250rpx;">
+      {{store_type[index]}}
+    </view>
+  </picker>
+接上点击事件  改变index
+edit: function(e) {
+    var t = this
+    console.log('picker发送选择改变，携带值为', e.detail.value);
+    var tt = e.detail.value
+    t.setData({
+      index: e.detail.value
+    })
+    wx.setNavigationBarTitle({
+      title: t.data.poster_arr[tt],
+    })
+  },
+
+//复制  num是数据
+ wx.setClipboardData({
+      data: num,
+      success: function (res) {
+        console.log(res);
+        wx.showToast({
+          title: '微信号"' + data + '"复制成功 ',
+          duration: 2000
+        })
+      }
+    })
+
+  // 页面上拉触底事件的处理函数
+  onReachBottom: function() {
+    var that = this;
+    var cpage = that.data.page;
+    that.data.page = that.data.page + 1;//改变page
+    that.setData({
+      page: that.data.page
+    })
+    that.getmorecontent();//获取数据方法  通过page改变数据
+  },
+
+  // 获取更多数据
+  getmorecontent: function() {
+    var t = this,
+      e = wx.getStorageSync("System");
+    var n = wx.getStorageSync("url");
+    wx.setNavigationBarTitle({
+        title: '更多'
+      }),
+      t.setData({
+        urls: n,
+        pt_name: e.pt_name,
+        System: wx.getStorageSync("System")
+      }), app.util.request({
+        url: "entry/wxapp/GetExtensions",
+        cachetime: "0",
+        data: {
+          page: t.data.page
+        },
+        success: function(a) {
+          console.log(a);
+          var e = a.data.data;
+          console.log(e)
+          var lstt = t.data.arr;
+          for (var i = 0; i < e.length; i++) {
+            lstt.push(e[i])//push添加到数据尾部
+          }
+          t.setData({
+            arr: lstt,
+
+          });
+        }
+      });
+
+  },
+
+//智能名片总结
+1.weui的picker日期
+	//方法 js方法写在这里
+			showDatePicker: function (event) {          // 日期插件
+				var that = this
+				var date_arr = that.value.split("-");
+				var year = date_arr[0];
+				var month = date_arr[1];
+
+				var arr = [];
+
+				if (that.value == "") {
+					var now_date = new Date();
+					arr = [now_date.getFullYear(), now_date.getMonth() + 1]
+				} else {
+					arr = [year, month];
+				}
+				weui.datePicker({
+					defaultValue: arr,
+					start: 1900,
+					depth: 2,//控制有几列
+					end: new Date().getFullYear(),
+					onChange: function (result) {
+						var time = ''
+						time = result[0] + "-" + result[1] + "-" + result[2]
+						// that.value = time
+					},
+					onConfirm: function (result) {
+						that.all_arr = [];
+						var time = ''
+						if (result[1] < 10) {
+							result[1] = "0" + result[1]
+						}
+
+						time = result[0] + "-" + result[1]
+						that.value = time
+						ajax_bonus_list(that, that.page, that.value);
+					}
+				});
+			},
+
+		},
+
+
+
+智能名片小程序总结
+
+1.可通过点击本页返回上页并修改上页的数据
+ back_edit() {
+    var that = this;
+    //判断有无上传头像
+    if (that.data.photo == "") {
+      wx.showToast({
+        title: '请上传头像',
+        icon: 'none',
+        duration: 1500
+      });
+      return;
+    }
+//改变数据操作
+    var pages = getCurrentPages();
+    var currPage = pages[pages.length - 1];
+    var prevPage = pages[pages.length - 2]; //上一页数据
+    prevPage.setData({
+      module: that.data.which,
+      user_photo: that.data.photo
+    });
+    //返回操作
+    wx.navigateBack({
+      detail: 1
+    })
+  },
+
+
+2.监听textarea字数  绑定bindinput
+  //监听输入数量
+  listen_text: function(e) {
+    var that = this;
+    // 获取输入框的内容
+    var value = e.detail.value;
+    // 获取输入框内容的长度
+    var len = parseInt(value.length);
+    console.log("数量==", len);
+    that.setData({
+      min_num: len
+    });
+    if (len >= that.data.max_length) {
+      wx.showToast({
+        title: '最多输入500个字',
+        icon: 'none',
+        duration: 1500
+      });
+      return;
+    }
+  },
+
+
+  // 保存到通讯录 自带选择新建还是修改
+  copy_phone(t) {
+    var that = this,
+      num = t.currentTarget.dataset.num;
+
+
+    wx.addPhoneContact({
+      firstName: that.data.card_info.name,
+      mobilePhoneNumber: that.data.card_info.phone,
+      success: (res) => {
+        console.log(res)
+      }
+    })
+   
+
+
+  },
+
+3.全局获取数据比单个监听快捷
+<form bindsubmit="bindSave">
+  <button class="save" formType="submit">保存</button>
+ </form>
+
+
+4.完整的生成海报
+
+ //跳转生成海报 start
+  create_canvas: function() {    //拿到数据后调用
+    var that = this;
+    var phone_pic = that.data.http_host + '/smart_card/web/static/images/detail_icon_phone@2x.png';
+    var wei_pic = that.data.http_host + '/smart_card/web/static/images/detail_icon_wechat@2x.png';
+    var xin_pic = that.data.http_host + '/smart_card/web/static/images/detail_icon_mail@2x.png';
+    var addrss_pic = that.data.http_host + '/smart_card/web/static/images/detail_icon_navigation@2x.png';
+    var pic = that.data.heard_pic;
+    if (that.data.card_info.status == '1') {
+      var ren_icon = that.data.http_host + '/smart_card/web/static/images/icon_verification_code_s@2x.png';
+      console.log('ren_icon', ren_icon)
+    } else {
+      var ren_icon = that.data.http_host + '/smart_card/web/static/images/icon_verification_code_n@2x.png';
+    }
+    wx.downloadFile({
+      url: pic, //注意公众平台是否配置相应的域名
+      success: function(res) {
+        //  console.log('头像临时路径', res.tempFilePath)
+        //头像图片
+        var user_pic = res.tempFilePath;
+        that.setData({
+          canvasimgbg: user_pic
+        })
+        wx.downloadFile({
+          url: phone_pic, //注意公众平台是否配置相应的域名
+          success: function(res) {
+            // console.log('电话临时路径', res.tempFilePath);
+            //电话图片
+            var phone_icon = res.tempFilePath;
+            that.setData({
+              phone_pic: phone_icon
+            })
+            wx.downloadFile({
+              url: xin_pic, //注意公众平台是否配置相应的域名
+              success: function(res) {
+                //email图片
+                var eamil_icon = res.tempFilePath;
+                // console.log('email临时路径', eamil_icon)
+                that.setData({
+                  xin_pic: eamil_icon,
+                })
+                wx.downloadFile({
+                  url: addrss_pic, //注意公众平台是否配置相应的域名
+                  success: function(res) {
+                    //     console.log('地址临时路径', res.tempFilePath);
+                    //地址图片
+                    var address_icon = res.tempFilePath;
+                    that.setData({
+                      addrss_pic: address_icon
+                    })
+                    wx.downloadFile({
+                      url: wei_pic, //注意公众平台是否配置相应的域名
+                      success: function(res) {
+                        //  console.log('微信临时路径', res.tempFilePath);
+                        //微信图片
+                        var wei_icon = res.tempFilePath;
+                        that.setData({
+                          wei_pic: wei_icon,
+                        })
+                        wx.downloadFile({
+                          url: ren_icon, //注意公众平台是否配置相应的域名
+                          success: function (res) {
+                              console.log('认证临时路径', res.tempFilePath);
+                            //认证图片
+                            var renz_icon = res.tempFilePath;
+                            that.setData({
+                              renz_icon: renz_icon,
+                            })
+                            that.save_canvas();   //拿到图片数据后调用
+                          }
+                        })
+                      }
+                    })
+                  }
+                })
+              }
+            })
+          }
+        })
+      }
+    })
+    wx.getSystemInfo({
+      success: function(t) {
+        that.setData({
+          width: t.windowWidth,
+          windowHeight: t.windowHeight
+        });
+      }
+    })
+  },
+  save_canvas: function(t) {
+    var that = this;
+    console.log("data====", that.data);
+    var ctx = wx.createCanvasContext("firstCanvas")
+    var i = that.data.width;
+    ctx.setFillStyle("#fff"), ctx.rect(0, 0, i, 400), ctx.fill();
+
+// 画圆并填充图片
+    ctx.save();
+    ctx.beginPath();
+    // 下面是先定位要开个圆形的位置，50 和 90 分别就是圆的圆心的 x 坐标和 y 坐标，25 是半径，后面的两个参数就是起始和结束，这样就能画好一个圆了
+    ctx.arc(i / 2.5, 70, 40, 0, 2 * Math.PI);
+    // ctx.closePath();
+    // 下面就裁剪出一个圆形了，且坐标在 （50， 90）
+    ctx.clip();
+    ctx.drawImage(that.data.canvasimgbg, i / 2.5 - 40, 30, 80, 80); //二维码
+    ctx.restore();
+
+// 画个圆角矩形
+    ctx.save();
+    ctx.beginPath();
+    ctx.setFillStyle('#ffb734')
+    // ctx.setStrokeStyle('#f00')    // 设置边框颜色
+    ctx.moveTo((i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2-10, 145)
+    ctx.lineTo((i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2+10 + ctx.measureText(that.data.card_info.position).width, 145)
+    ctx.lineTo((i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2+10 + ctx.measureText(that.data.card_info.position).width, 165)
+    ctx.lineTo((i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2-10, 165)
+    ctx.lineTo((i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2-10, 145)
+    // ctx.stroke()    // 绘制边框
+    ctx.fill();
+    ctx.restore();
+
+
+//获取文本长度ctx.measureText(that.data.card_info.name).width)
+
+     //姓名
+    ctx.fillStyle = "#000", ctx.setFontSize(15), ctx.fillText(that.data.card_info.name, (i * 0.8 - ctx.measureText(that.data.card_info.name).width) / 2, 135);
+//职位
+    ctx.fillStyle = "#fff", ctx.setFontSize(13), ctx.fillText(that.data.card_info.position, (i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2, 160);
+    // 公司  company_name
+    ctx.fillStyle = "#000", ctx.setFontSize(13), ctx.fillText(that.data.card_info.company_name, (i * 0.8 - ctx.measureText(that.data.card_info.company_name).width) / 2, 190);
+    ctx.fillStyle = "#000", ctx.setFontSize(13), ctx.fillText(that.data.card_info.phone, 50, 230);
+    ctx.fillStyle = "#000", ctx.setFontSize(13), ctx.fillText(that.data.card_info.weixin, 50, 255);
+    ctx.fillStyle = "#000", ctx.setFontSize(13), ctx.fillText(that.data.card_info.email, 50, 280);
+    //ctx.fillStyle = "#000", ctx.setFontSize(13), ctx.fillText(that.data.card_info.address, i - 280, 265);
+    ctx.drawImage(that.data.phone_pic, 25, 215, 20, 20); //电话
+    ctx.drawImage(that.data.wei_pic, 25, 266, 20, 20); //微信
+    ctx.drawImage(that.data.xin_pic, 25, 241, 20, 20); //email
+    ctx.drawImage(that.data.addrss_pic, 25, 291, 20, 20); //电话
+    ctx.drawImage(that.data.canvasimgbg, i - 150, 330, 60, 60); //二维码
+
+    // renz_icon 认证图片
+    ctx.drawImage(that.data.renz_icon, (i * 0.8 - ctx.measureText(that.data.card_info.position).width) / 2 + ctx.measureText(that.data.card_info.position).width/2+25, 175, 20, 20); //二维码
+
+ //文本换行操作
+    var text = that.data.card_info.address;
+    var chr = text.split(""); //这个方法是将一个字符串分割成字符串数组
+    var temp = "";
+    var row = [];
+    ctx.setFontSize(13)
+    ctx.setFillStyle("#000")
+    for (var a = 0; a < chr.length; a++) {
+      if (ctx.measureText(temp).width < 180) {
+        temp += chr[a];
+      } else {
+        a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+        row.push(temp);
+        temp = "";
+      }
+    }
+    row.push(temp);
+    //如果数组长度大于2 则截取前两个
+    if (row.length > 3) {
+      var rowCut = row.slice(0, 2);
+      var rowPart = rowCut[1];
+      var test = "";
+      var empty = [];
+      for (var a = 0; a < rowPart.length; a++) {
+        if (ctx.measureText(test).width < 160) {
+          test += rowPart[a];
+        } else {
+          break;
+        }
+      }
+      empty.push(test);
+      var group = empty[0] + "..." //这里只显示两行，超出的用...表示
+      rowCut.splice(1, 1, group);
+      row = rowCut;
+    }
+    for (var b = 0; b < row.length; b++) {
+      ctx.fillText(row[b], 50, 305 + b * 20);
+    }
+    ctx.draw();
+  },
+  code_show: function(e) {   //这个只是控制海报显示隐藏
+    var that = this;
+    var status = e.currentTarget.dataset.status;
+    if (status == 1) {
+      //生成海报
+      wx.showToast({
+        title: '生成中...',
+        mask: true,
+        icon: 'loading'
+      });
+      setTimeout(function() {
+        that.setData({
+          code_show: false,
+          isbeach: false
+        })
+      }, 1000);
+    } else {
+      that.setData({
+        code_show: true,
+        isbeach: false,
+      })
+    }
+  },
+
+  totemp: function(t) {  //保存海报方法
+    var a = this.data.width,
+      e = this.data.canvas_height;
+    wx.canvasToTempFilePath({
+      x: 0,
+      y: 0,
+      width: a,
+      height: e,
+      canvasId: "firstCanvas",
+      success: function(t) {
+        console.log("canvas绘画路径==", t.tempFilePath);
+        wx.saveImageToPhotosAlbum({
+          filePath: t.tempFilePath,
+          success: function(t) {
+            wx.showToast({
+              title: "保存成功"
+            });
+          },
+          fail: function(t) {},
+          complete: function(t) {}
+        });
+      }
+    });
+  },
+  //生成海报JS-end
+  //生成海报JS-end
+
+
+6.录音全部方法
+
+//data的数据
+    http_host: app.globalData.http_host,
+    audio_start: false,
+    status: 1,
+    is_open: true,
+    start_url: app.globalData.http_host+"/smart_card/web/static/images/my_voice_pause_recording@2x.png",
+    open_url: app.globalData.http_host+"/smart_card/web/static/images/my_voice_continue_recording@2x.png",
+    start_text: "暂停录音",
+    open_text: "继续录音",
+    is_try: true,
+    try_start: app.globalData.http_host+"/smart_card/web/static/images/my_voice_pause@2x.png",
+    try_stop: app.globalData.http_host+"/smart_card/web/static/images/my_voice_pause_re_b@2x.png",
+    my_voice: "http://vd3.bdstatic.com/mda-ic7mxzt5cvz6f4y5/mda-ic7mxzt5cvz6f4y5.mp3",
+    times: "00:00",
+    timess: 0,
+    isshou:true
+
+
+  audio_open() {
+    var that = this;
+    if(that.data.isshou == false){
+      that.getluinfo();
+
+    }
+    const options = {
+      duration: 90000, //指定录音的时长，单位 ms
+      sampleRate: 16000, //采样率
+      numberOfChannels: 1, //录音通道数
+      encodeBitRate: 96000, //编码码率
+      format: 'mp3', //音频格式，有效值 aac/mp3
+      frameSize: 50, //指定帧大小，单位 KB
+    }
+
+    //开始录音
+    recorderManager.start(options);
+    recorderManager.onStart(() => {
+      var that = this;
+      console.log('recorder start');
+      that.setData({
+        audio_start: true,
+        status: 2
+      })
+
+      Countdown(that);
+      var secondes = that.data.timess;
+      function Countdown(that) {
+        timer = setTimeout(function() {
+          // console.log("----secondes----" + formatSeconds(secondes));
+          // console.log("已用时间",secondes)
+          secondes++;
+          if (secondes > 90) {
+            recorderManager.stop();
+            clearTimeout(timer);
+          } else {
+            that.setData({
+              times: formatSeconds(secondes),
+              timess: secondes
+            });
+            Countdown(that);
+          }
+
+        }, 1000);
+
+      };
+      function formatSeconds(value) {
+        var secondTime = parseInt(value); // 秒
+        var minuteTime = 0; // 分
+        var hourTime = 0; // 小时
+        if (secondTime > 60) { //如果秒数大于60，将秒数转换成整数
+          //获取分钟，除以60取整数，得到整数分钟
+          minuteTime = parseInt(secondTime / 60);
+          //获取秒数，秒数取佘，得到整数秒数
+          secondTime = parseInt(secondTime % 60);
+          //如果分钟大于60，将分钟转换成小时
+          if (minuteTime > 60) {
+            //获取小时，获取分钟除以60，得到整数小时
+            hourTime = parseInt(minuteTime / 60);
+            //获取小时后取佘的分，获取分钟除以60取佘的分
+            minuteTime = parseInt(minuteTime % 60);
+          }
+        }
+        var result;
+        //时间的展示方式为00:00
+        if (secondTime < 10) {
+          result = "0" + parseInt(secondTime);
+        } else {
+          result = "" + parseInt(secondTime);
+        }
+        if (minuteTime > 0) {
+          if (minuteTime < 10) {
+            result = "0" + parseInt(minuteTime) + ":" + result;
+          } else {
+            result = "" + parseInt(minuteTime) + ":" + result;
+          }
+        } else {
+          result = "00:" + result;
+        }
+        //由于限制时长最多为三分钟,小时用不到
+        if (hourTime > 0) {
+          result = "" + parseInt(hourTime) + ":" + result;
+        }
+        return result;
+      };
+    });
+    //错误回调
+    recorderManager.onError((res) => {
+      console.log(res);
+      clearTimeout(timer);
+      console.log("用户可能拒绝了授权");
+      that.setData({
+        isshou:false
+      })
+    })
+  },
+  // 点击暂停
+  audio_stop() {
+    var that = this;
+    if (that.data.is_open) {
+      console.log('停止录音方法')
+      recorderManager.pause();
+      recorderManager.onPause(() => {
+        console.log('录音暂停事件');
+        clearTimeout(timer);
+      })
+    } else {
+      recorderManager.resume();
+      recorderManager.onResume(() => {
+        var that = this;
+        console.log('录音继续事件');
+        var secondes = that.data.timess;
+        Countdown(that);
+        function Countdown(that) {
+          timer = setTimeout(function() {
+            // console.log("----secondes----" + formatSeconds(secondes));
+            secondes++;
+            if (secondes > 90) {
+              recorderManager.stop();
+              clearTimeout(timer);
+            } else {
+              that.setData({
+                times: formatSeconds(secondes),
+                timess: secondes
+              });
+              Countdown(that);
+            }
+          }, 1000);
+
+        };
+        function formatSeconds(value) {
+          var secondTime = parseInt(value); // 秒
+          var minuteTime = 0; // 分
+          var hourTime = 0; // 小时
+          if (secondTime > 60) { //如果秒数大于60，将秒数转换成整数
+            //获取分钟，除以60取整数，得到整数分钟
+            minuteTime = parseInt(secondTime / 60);
+            //获取秒数，秒数取佘，得到整数秒数
+            secondTime = parseInt(secondTime % 60);
+            //如果分钟大于60，将分钟转换成小时
+            if (minuteTime > 60) {
+              //获取小时，获取分钟除以60，得到整数小时
+              hourTime = parseInt(minuteTime / 60);
+              //获取小时后取佘的分，获取分钟除以60取佘的分
+              minuteTime = parseInt(minuteTime % 60);
+            }
+          }
+          var result;
+          //时间的展示方式为00:00
+          if (secondTime < 10) {
+            result = "0" + parseInt(secondTime);
+          } else {
+            result = "" + parseInt(secondTime);
+          }
+          if (minuteTime > 0) {
+            if (minuteTime < 10) {
+              result = "0" + parseInt(minuteTime) + ":" + result;
+            } else {
+              result = "" + parseInt(minuteTime) + ":" + result;
+            }
+          } else {
+            result = "00:" + result;
+          }
+          //由于限制时长最多为三分钟,小时用不到
+          if (hourTime > 0) {
+            result = "" + parseInt(hourTime) + ":" + result;
+          }
+          return result;
+        };
+
+      })
+    }
+    that.setData({
+      is_open: !that.data.is_open,
+    })
+  },
+  // 点击重录
+  replact_audio() {
+    var that = this;
+    recorderManager.stop();
+    clearTimeout(timer);
+    that.setData({
+      status: 1,
+      audio_start: false,
+      is_open: true,
+    //  start_url: that.data.http_host + "/smart_card/web/static/images/my_voice_pause_recording@2x.png",
+      start_text: "暂停录音",
+      my_voice: "",
+      is_try: true,
+      times: "00:00",
+      timess: 0
+    })
+  },
+  // 点击完成录音
+  over_audio() {
+    var that = this;
+    clearTimeout(timer);
+    console.log('停止录音')
+    recorderManager.stop();
+    recorderManager.onStop((res) => {
+      that.data.my_voice = res.tempFilePath;
+      console.log('停止录音', res.tempFilePath)
+      const {
+        tempFilePath
+      } = res
+    })
+    that.setData({
+      status: 3
+    })
+  },
+  // 点击试听
+  audio_try() {
+    var that = this;
+    console.log("当前录制==", that.data.my_voice);
+    //播放语音
+    if (that.data.is_try) {
+      innerAudioContext.autoplay = true
+      innerAudioContext.src = that.data.tempFilePath,
+        innerAudioContext.onPlay(() => {
+          console.log('开始播放')
+        })
+      innerAudioContext.play();
+      innerAudioContext.src = that.data.my_voice
+    } else {
+      //暂停播放语音
+      innerAudioContext.pause();
+      // innerAudioContext.src = that.data.my_voice
+    }
+    innerAudioContext.onEnded(() => {
+      console.log('音频播放结束了');
+      that.setData({
+        is_try: true
+      })
+    })
+    that.setData({
+      is_try: !that.data.is_try
+    })
+  },
+  // 点击保存
+  save_audio() {
+    var that = this;
+    var format = {};
+    format.customer_id = app.globalData.customer_id;
+    format.api_key = app.globalData.api_key;
+    format.app_id = app.globalData.app_id;
+    format.client = 'mini_pro';
+    format.mini_user_token = app.globalData.token;
+    console.log("recodePath===", that.data.times);
+    console.log("recodePat22h===", that.data.timess);
+    wx.uploadFile({
+      url: that.data.http_host + '/smart_card/web/index.php?m=index&a=upload_voice',
+      filePath: that.data.my_voice,
+      formData: format,
+      name: 'file',
+      success: function(res) {
+        var str = res.data;
+        var data = JSON.parse(str);
+        console.log("OK===", data.data)
+        var pages = getCurrentPages();
+        var prevPage = pages[pages.length - 2]; //上一页数据
+        prevPage.setData({
+          audio_src: data.data,
+          audio_secend: that.data.timess
+        });
+        wx.navigateBack({
+          detail: 1
+        })
+      },
+      fail: function(res) {
+        console.log(res);
+        wx.showModal({
+          title: '提示',
+          content: "网络请求失败，请确保网络是否正常",
+          showCancel: false,
+          success: function(res) {}
+        });
+      }
+    });
+  },
+  // 获取录音授权
+  getluinfo() {
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.record']) {
+          //调取小程序新版授权页面
+          wx.authorize({
+            scope: 'scope.record',
+            success() {
+              console.log("录音授权成功");
+              // 用户已经同意小程序使用录音功能
+            },
+            fail() {
+              console.log("第一次录音授权失败");
+              wx.showModal({
+                title: '提示',
+                content: '您未授权录音，功能将无法使用',
+                showCancel: true,
+                confirmText: "授权",
+                confirmColor: "#52a2d8",
+                success: function (res) {
+                  if (res.confirm) {
+                    //确认则打开设置页面（重点）
+                    wx.openSetting({
+                      success: (res) => {
+                        console.log(res.authSetting);
+                        if (!res.authSetting['scope.record']) {
+                          //未设置录音授权
+                          console.log("未设置录音授权");
+                          wx.showModal({
+                            title: '提示',
+                            content: '您未授权录音，功能将无法使用',
+                            showCancel: false,
+                            success: function (res) {
+                            },
+                          })
+                        } else {
+                          //第二次才成功授权
+                          console.log("设置录音授权成功");
+                        }
+                      },
+                      fail: function () {
+                        console.log("授权设置录音失败");
+                      }
+                    })
+                  } else if (res.cancel) {
+                    console.log("cancel");
+                  }
+                },
+                fail: function () {
+                  console.log("openfail");
+                }
+              })
+            }
+          })
+        } else {
+          console.log("已经获取授权了")
+        }
+      }
+    })
+  },
+
+
+技术 promise封装jquery的ajax
+
+ var param = {   //参数
+        index_1: 1
+    };
+
+    var ajax = function (method, url, param) {  //封装方法
+
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                method: method,
+                url: url,
+                data: param,
+                success: function (data) {
+                    resolve(data);
+                },
+                error: function (error) {
+                    reject(error)
+                }
+            });
+        }
+        )
+    };
+    var con = "";
+
+    ajax("GET", 'data.json', param).then(function (res) {  //调用
+        // 启动第一个任务
+        // 处理第一个异步任务的结果(每次调用then都会返回一个新创建的Promise对象
+        // console.dir(res[1].name);
+
+        $.each(res, function (ket, val) {
+            con += "<label>姓名：" + val.name + "</label><br/>"
+        });
+        $("#div1").html(con);
+
+        var param2 = res[0];
+        return ajax('GET', 'data2.json', param2);       // 启动第二个任务
+    }).then(function (data2) {                          //处理第二个异步任务的结果
+        // console.log(data2[0].name);
+        var name = "<label>姓名：" + data2[0].name + "</label>";
+
+        $("#div2").html(name);
+    });
+
+// 原生ajax promise
+const getJSON = function(url) {
+  const promise = new Promise(function(resolve, reject){
+    const handler = function() {
+      if (this.readyState !== 4) {
+        return;
+      }
+      if (this.status === 200) {
+        resolve(this.response);
+      } else {
+        reject(new Error(this.statusText));
+      }
+    };
+    const client = new XMLHttpRequest();
+    client.open("GET", url);
+    client.onreadystatechange = handler;
+    client.responseType = "json";
+    client.setRequestHeader("Accept", "application/json");
+    client.send();
+
+  });
+
+  return promise;
+};
+
+getJSON("/posts.json").then(function(json) {
+  console.log('Contents: ' + json);
+}, function(error) {
+  console.error('出错了', error);
+});
+
+
+
+ajax 原生创建
+var xhr =null;//创建对象 
+if(window.XMLHttpRequest){
+	xhr = new XMLHttpRequest();
+}else{
+	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+}
+     xhr.open(“方式”,”地址”,”标志位”);//初始化请求 
+     xhr.setRequestHeader(“”,””);//设置http头信息 
+     xhr.onreadystatechange =function(){}//指定回调函数 
+     xhr.send();//发送请求 
